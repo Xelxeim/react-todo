@@ -1,0 +1,31 @@
+.postlist__item {
+  width: inherit;
+  margin-top: 5px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  font-size: 2.2rem;
+}
+
+.postlist__item-btns {
+  display: flex;
+}
+
+.delete {
+  color: red;
+}
+
+.star {
+  color: rgb(109, 106, 106);
+}
+
+.important {
+  color: rgb(199, 35, 35);
+  font-weight: bold;
+}
+
+.btn-important {
+  color: rgb(165, 218, 60);
+}
