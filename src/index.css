@@ -36,3 +36,24 @@ code {
 .mt-2rem {
   margin-top: 2rem;
 }
+
+.search-panel {
+  display: flex;
+}
+
+.btn-group {
+  display: flex;
+}
+
+input {
+  max-width: 35rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+}
+
+.search-panel {
+  display: flex;
+  justify-content: space-around;
+}

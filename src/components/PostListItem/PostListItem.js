@@ -15,7 +15,7 @@ const PostListItem = (props) => {
   return (
     <>
       <p className={importanceClass}>{title}</p>
-      <div className="postlist__item-btns">
+      <div className="btn-group">
         <button 
           className={`btn star mr-5px ${importanceBtnClass}`}
           onClick={onToggle}

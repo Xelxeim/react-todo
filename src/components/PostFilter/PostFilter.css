@@ -1,0 +1,8 @@
+.btn-filter {
+  border-radius: 0px;
+} 
+
+.active {
+  background-color: rgb(94, 94, 218);
+  color: rgb(247, 242, 242);
+}

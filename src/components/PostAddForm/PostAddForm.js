@@ -47,4 +47,3 @@ export default class PostAddForm extends Component {
     )
   }
 }
-
