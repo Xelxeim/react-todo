@@ -2,11 +2,13 @@ import React from "react";
 
 import "./AppHeader.css";
 
-const AppHeader = () => {
+const AppHeader = (props) => {
+  const { total, important } = props;
+  
   return (
     <header>
       <h1>Привет, FirstName LastName!</h1>
-      <h2>Всего записей - , из них</h2>
+      <h2>Всего записей - {total}, из них {important} важные</h2>
     </header>
   );
 }

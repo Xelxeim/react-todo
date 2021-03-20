@@ -3,8 +3,8 @@ import React from "react";
 import "./PostListItem.css";
 
 const PostListItem = (props) => {
-
-  const { title, important, onToggle } = props;
+  const { title, important, onToggle, onDelete } = props;
+  
   let importanceClass = "important";
   let importanceBtnClass = "btn-important";
   if (!important) {
@@ -22,7 +22,10 @@ const PostListItem = (props) => {
         >
           <i className="fa fa-star"></i>
         </button>
-        <button className="btn delete">
+        <button 
+          className="btn delete"
+          onClick={onDelete}
+        >
           <i className="fa fa-trash-o"></i>
         </button>
       </div>

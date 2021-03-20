@@ -4,7 +4,8 @@
 }
 
 .postadder__input {
-  width: 35rem;
+  max-width: 35rem;
+  width: 100%;
   padding: 1rem 2rem;
   font-size: 1.5rem;
   box-sizing: border-box;
