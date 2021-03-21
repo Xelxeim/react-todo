@@ -1,4 +1,11 @@
-.search-panel {
-  display: flex;
-  justify-content: space-between;
+.search-panel__input {
+  max-width: 20rem;
+  width: 100%;
+}
+
+@media (max-width: 668px) {
+  .search-panel__input {
+    max-width: inherit;
+    width: 100%;
+  }
 }

@@ -12,21 +12,21 @@ export default class App extends Component {
 
   state = {
     data: [
-      {key: "0", text: "MonkaS", important: false}, 
-      {key: "1", text: "MonkaGIGA", important: false},
-      {key: "2", text: "peepoRot", important: false}
+      {key: "0", text: "MonkaS", important: false, completed: false}, 
+      {key: "1", text: "MonkaGIGA", important: false, completed: false},
+      {key: "2", text: "peepoRot", important: false, completed: false}
     ],
     filterPattern: "",
     currentFilter: "All"
   }
 
-  onToggleImportant = (id, important) => {
+  onToggleParam = (id, param) => {
     this.setState(({ data }) => {
       const index = data.findIndex(item => item.key === id),
             elem = data[index],
-            modifiedElem = {...elem, important: !important},
+            modifiedElem = {...elem, [param]: !elem[param]},
             modifiedData = [...data.slice(0, index), modifiedElem, ...data.slice(index + 1)];
-
+      
       return {
         data: modifiedData
       }
@@ -89,18 +89,26 @@ export default class App extends Component {
       case "All":
         visiblePosts = data;
         break; 
+
       case "Important":
         visiblePosts = data.filter(item => item.important);
         break;
+
+      case "Completed":
+        visiblePosts = data.filter(item => item.completed);
+        break;
+
       default:
         break;
     }
+    
     return visiblePosts;
   }
 
   render(){
     const { data, currentFilter, filterPattern } = this.state,
           importantPosts = data.filter(item => item.important).length,
+          completedPosts = data.filter(item => item.completed).length,
           visiblePosts = this.filterPosts(this.searchPosts(data, filterPattern));
 
     return (
@@ -108,6 +116,7 @@ export default class App extends Component {
         <AppHeader 
           total={data.length}
           important={importantPosts}
+          completed={completedPosts}
         />
         <div className="container">
           <div className="search-panel">
@@ -119,7 +128,7 @@ export default class App extends Component {
           </div>        
           <PostList 
             data={visiblePosts}
-            onToggle={this.onToggleImportant}
+            onToggle={this.onToggleParam}
             onDelete={this.onDelete}
           />
           <PostAddForm onAdd={this.addItem}/>

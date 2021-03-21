@@ -37,10 +37,6 @@ code {
   margin-top: 2rem;
 }
 
-.search-panel {
-  display: flex;
-}
-
 .btn-group {
   display: flex;
 }
@@ -56,4 +52,10 @@ input {
 .search-panel {
   display: flex;
   justify-content: space-around;
+}
+
+@media (max-width: 668px) {
+  .search-panel {
+    flex-wrap: wrap;
+  }
 }

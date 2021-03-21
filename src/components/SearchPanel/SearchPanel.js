@@ -21,7 +21,8 @@ export default class SearchPanel extends Component {
 
   render() {
     return(
-      <input 
+      <input
+        className="search-panel__input"
         placeholder="type to search"
         onChange={this.handleInput}
       >

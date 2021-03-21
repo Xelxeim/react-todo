@@ -5,10 +5,11 @@ import "./PostFilter.css";
 const PostFilter = (props) => {
   const buttons = [
     {key: "fasw", label: "All"},
-    {key: "sdaq", label: "Important"}
-  ],
-  { onFilter, filter } = props,
-  elements = buttons.map(
+    {key: "sdaq", label: "Important"},
+    {key: "osao", label: "Completed"}
+  ];
+  const { onFilter, filter } = props;
+  const elements = buttons.map(
     item => {
       let activeClass;
 
@@ -24,7 +25,9 @@ const PostFilter = (props) => {
         >
           {item.label}
         </button>)
-  })
+    }
+  )
+  
   return (
     <div className="btn-group">
       {elements}

@@ -8,14 +8,16 @@ const PostList = (props) => {
   const { data, onToggle, onDelete } = props;
 
   const elements = data.map(item => {
-    const {key, text, important } = item;
+    const {key, text, important, completed } = item;
     
     return(
       <li key={key} className="postlist__item">
         <PostListItem 
           title={text} 
-          important={important} 
-          onToggle={() => onToggle(key, important)}
+          important={important}
+          completed={completed} 
+          onToggleImportant={() => onToggle(key, "important")}
+          onToggleComplete={() => onToggle(key, "completed")}
           onDelete={() => onDelete(key)}
         />
       </li>

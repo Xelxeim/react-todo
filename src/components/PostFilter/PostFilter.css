@@ -6,3 +6,15 @@
   background-color: rgb(94, 94, 218);
   color: rgb(247, 242, 242);
 }
+
+@media (max-width: 668px) {
+  .btn-group {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-filter {
+    max-width: 15rem;
+  } 
+}

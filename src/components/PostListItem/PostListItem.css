@@ -1,5 +1,5 @@
 .postlist__item {
-  width: inherit;
+  width: 100%;
   margin-top: 5px;
   padding: 0 2rem;
   display: flex;
@@ -9,7 +9,12 @@
   font-size: 2.2rem;
 }
 
-.btn-group {
+.postlist__item p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.postlist__item-btn-group {
   display: flex;
 }
 
@@ -28,4 +33,23 @@
 
 .btn-important {
   color: rgb(165, 218, 60);
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.btn-complete {
+  color: rgb(69, 224, 63)
+}
+
+@media (max-width: 668px) {
+  .postlist__item-btn-group {
+    flex-direction: column;
+  }
+
+  .mr-5px {
+    margin-right: 0;
+    margin: 5px 0;
+  }
 }
