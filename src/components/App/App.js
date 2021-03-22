@@ -9,7 +9,6 @@ import PostFilter from "../PostFilter";
 import SearchPanel from "../SearchPanel";
 
 export default class App extends Component {
-
   state = {
     data: [
       {key: "0", text: "MonkaS", important: false, completed: false}, 

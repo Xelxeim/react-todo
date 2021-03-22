@@ -30,7 +30,6 @@ export default class PostAddForm extends Component {
   }
 
   render(){
-
     return (
       <form onSubmit={this.handleSubmit} className="postadder mt-2rem">
         <input 

@@ -9,6 +9,7 @@ const PostFilter = (props) => {
     {key: "osao", label: "Completed"}
   ];
   const { onFilter, filter } = props;
+  
   const elements = buttons.map(
     item => {
       let activeClass;
